@@ -69,7 +69,7 @@ VALUES (' . (int) $params['id_attribute_group'] . ', ' . (int) Tools::getValue('
                 (`id_attribute_group`, `id_lang`, `url_name`, `meta_title`)
                 VALUES (
                 ' . (int) $params['id_attribute_group'] . ', ' . (int) $language['id_lang'] . ',
-                \'' . pSQL(Tools::link_rewrite($seoUrl)) . '\',
+                \'' . pSQL(Tools::str2url($seoUrl)) . '\',
                 \'' . pSQL($metaTitle, true) . '\')'
             );
         }
@@ -123,11 +123,6 @@ VALUES (' . (int) $params['id_attribute_group'] . ', ' . (int) Tools::getValue('
             FROM ' . _DB_PREFIX_ . 'layered_indexable_attribute_group
             WHERE `id_attribute_group` = ' . (int) $params['id_attribute_group']
         );
-
-        // Request failed, force $isIndexable
-        if ($isIndexable === false) {
-            $isIndexable = true;
-        }
 
         if ($result = $this->database->executeS(
             'SELECT `url_name`, `meta_title`, `id_lang` FROM ' . _DB_PREFIX_ . 'layered_indexable_attribute_group_lang_value

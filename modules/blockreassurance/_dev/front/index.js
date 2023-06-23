@@ -1,63 +1,71 @@
 /**
- * 2007-2019 PrestaShop
+ * Copyright since 2007 PrestaShop SA and Contributors
+ * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
  *
  * NOTICE OF LICENSE
  *
- * This source file is subject to the Academic Free License (AFL 3.0)
- * that is bundled with this package in the file LICENSE.txt.
+ * This source file is subject to the Academic Free License version 3.0
+ * that is bundled with this package in the file LICENSE.md.
  * It is also available through the world-wide-web at this URL:
- * http://opensource.org/licenses/afl-3.0.php
+ * https://opensource.org/licenses/AFL-3.0
  * If you did not receive a copy of the license and are unable to
  * obtain it through the world-wide-web, please send an email
  * to license@prestashop.com so we can send you a copy immediately.
  *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to http://www.prestashop.com for more information.
- *
- * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2019 PrestaShop SA
- * @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
- * International Registered Trademark & Property of PrestaShop SA
+ * @author    PrestaShop SA and Contributors <contact@prestashop.com>
+ * @copyright Since 2007 PrestaShop SA and Contributors
+ * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
  */
 
 import './front.scss';
 
 $(window).ready(() => {
-  function styleSVG() {
-    const imgObject = $(this);
-    const imgID = imgObject.attr('id');
-    const imgClass = imgObject.attr('class');
-    const imgURL = imgObject.attr('src');
+  /**
+   * @param {String} imgSrc
+   */
+  function styleSVG(imgSrc) {
+    const imgTarget = $(`.blockreassurance_product img.svg.invisible[src="${imgSrc}"], .blockreassurance img.svg.invisible[src="${imgSrc}"]`);
 
+    if (imgTarget.length === 0) {
+      return;
+    }
+
+    // Fetch the image
     $.ajax({
-      url: imgURL,
+      url: imgSrc,
       type: 'GET',
       success(data) {
         if ($.isXMLDoc(data)) {
           // Get the SVG tag, ignore the rest
           let $svg = $(data).find('svg');
-          // Add replaced image's ID to the new SVG
-          $svg = typeof imgID !== 'undefined' ? $svg.attr('id', imgID) : $svg;
-          // Add replaced image's classes to the new SVG
-          $svg = typeof imgClass !== 'undefined' ? $svg.attr('class', `${imgClass} replaced-svg`) : $svg.attr('class', ' replaced-svg');
-          $svg.removeClass('invisible');
           // Add URL in data
-          $svg = $svg.attr('data-img-url', imgURL);
+          $svg = $svg.attr('data-img-url', imgSrc);
           // Remove any invalid XML tags as per http://validator.w3.org
           $svg = $svg.removeAttr('xmlns:a');
           // Set color defined in backoffice
           $svg.find('path[fill]').attr('fill', window.psr_icon_color);
           $svg.find('path:not([fill])').css('fill', window.psr_icon_color);
-          // Replace image with new SVG
-          imgObject.replaceWith($svg);
+          // For each element, replace the svg with specific ID & CSS class
+          imgTarget.each(function renderSVG() {
+            const imgID = $(this).attr('id');
+            const imgClass = $(this).attr('class');
+            let $imgSvg = $svg.clone();
+            // Add replaced image's ID to the new SVG
+            $imgSvg = typeof imgID !== 'undefined' ? $imgSvg.attr('id', imgID) : $imgSvg;
+            // Add replaced image's classes to the new SVG
+            $imgSvg = typeof imgClass !== 'undefined' ? $imgSvg.attr('class', `${imgClass} replaced-svg`) : $imgSvg.attr('class', ' replaced-svg');
+            $imgSvg.removeClass('invisible');
+            $(this).replaceWith($imgSvg);
+          });
         }
-        imgObject.removeClass('invisible');
       },
     });
   }
 
-  $('.blockreassurance_product img.svg, .blockreassurance img.svg').each(styleSVG);
+  const imgSrcSvg = $('.blockreassurance_product img.svg, .blockreassurance img.svg').map(function getSrcAttr() {
+    return $(this).attr('src');
+  }).toArray();
+  imgSrcSvg
+    .filter((el, pos) => imgSrcSvg.indexOf(el) === pos)
+    .forEach(styleSVG);
 });

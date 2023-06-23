@@ -1,2 +1,0 @@
-# MixShop
-TFG DAW

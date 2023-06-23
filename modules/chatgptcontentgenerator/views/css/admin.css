@@ -1,0 +1,201 @@
+/**
+* 2007-2023 PrestaShop
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Academic Free License (AFL 3.0)
+* that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/afl-3.0.php
+* If you did not receive a copy of the license and are unable to
+* obtain it through the world-wide-web, please send an email
+* to license@prestashop.com so we can send you a copy immediately.
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+* versions in the future. If you wish to customize PrestaShop for your
+* needs please refer to http://www.prestashop.com for more information.
+*
+*  @author    PrestaShop SA <contact@prestashop.com>
+*  @copyright 2007-2023 PrestaShop SA
+*  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+*  International Registered Trademark & Property of PrestaShop SA
+*
+* Don't forget to prefix your containers with your own identifier
+* to avoid any conflicts with others containers.
+*/
+
+
+.content-loader {
+   width: 11.2px;
+   height: 11.2px;
+   animation: content_loader_animation 2.8s infinite linear;
+   border-radius: 11.2px;
+   box-shadow: 28px 0px 0 0 #21a6c1, 17.4px 21.8px 0 0 #21a6c1, -6.2px 27.2px 0 0 #21a6c1, -25.2px 12px 0 0 #21a6c1, -25.2px -12px 0 0 #21a6c1, -6.2px -27.2px 0 0 #21a6c1, 17.4px -21.8px 0 0 #21a6c1;
+}
+
+@keyframes content_loader_animation {
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+.content-loader-layer {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 2000;
+	background-color: rgb(255 255 255 / 38%);
+}
+
+body > .content-loader-layer {
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+}
+
+.content-loader-layer .loader-wrapper {
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	z-index: 1;
+}
+
+.adminproducts .gpt-description-wraper {
+
+}
+
+.adminproducts .gpt-description-wraper .gpt-button-wraper {
+	padding-left: 0px !important;
+}
+
+.gpt-custom-request-wrapper .d-flex .flex-basis-100 {
+	flex-basis: 100%;
+}
+
+.modal.black-modal {
+	background-color: #00000059;
+}
+
+.translate-action-wrapper {
+	margin-top: 0.625rem;
+}
+
+.modal-with-tabs .nav-tabs .nav-link.active,
+.modal-with-tabs .nav-tabs .nav-item.show .nav-link{
+	border-left: 1px solid #25b9d7;
+    border-right: 1px solid #25b9d7;
+}
+
+.modal-with-tabs .tab-content {
+	    border: 1px solid #25b9d7;
+}
+
+.modal-with-tabs li.nav-item a {
+	position: relative;
+}
+
+.modal-with-tabs li.nav-item a.active::after {
+	display: block !important;
+	position: absolute;
+	content: '' !important;
+	width: 100%;
+	background-color: #FFF;
+	height: 10px;
+	bottom: -4px;
+	left: 0px;
+}
+
+.modal-with-tabs li.nav-item a.active {
+	border-bottom: none !important;
+	border-top: 3px solid #25b9d7 !important;
+    border-top: 0.1875rem solid #25b9d7 !important;
+}
+
+.gpt-select2-wrapper .select2-search {
+	display: none !important;
+}
+
+.gpt-select2-wrapper .select2-container--bootstrap .select2-selection--multiple .select2-selection__choice {
+	margin: 1px;
+}
+
+.gpt-select2-wrapper .select2-container--bootstrap .select2-selection--multiple {
+	border-radius: 4px;
+	padding: 2px;
+}
+
+table .gpt-select2-wrapper > .select2 {
+	width: 100% !important;
+}
+
+.pl-1px {
+	padding-left: 1px !important;
+}
+
+.gpt-modal .form-check-label {
+    margin-bottom: 0;
+}
+
+.gpt-modal .form-check-radio .form-check-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.gpt-modal .form-check-radio input {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.gpt-modal .form-check-round {
+    position: relative;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border: 2px solid #b3c7cd;
+    -webkit-transition: 0.25s ease-out;
+    transition: 0.25s ease-out;
+    border-radius: 50%;
+}
+
+.gpt-modal .form-check-round::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    content: "";
+    background: #25b9d7;
+    opacity: 0;
+    -webkit-transition: 0.25s ease-out;
+    transition: 0.25s ease-out;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+}
+
+.gpt-modal .form-check-radio input:checked ~ .form-check-round {
+    border-color: #25b9d7;
+}
+
+.gpt-modal .form-check-radio input:checked ~ .form-check-round::after {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+}

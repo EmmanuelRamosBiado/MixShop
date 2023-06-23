@@ -211,4 +211,6 @@
   211 => 'PrestaShop\\Module\\PsAccounts\\Controller\\RestControllerInterface',
   212 => 'PrestaShop\\Module\\PsEventbus\\Controller\\AbstractApiController',
   213 => 'PaypalAddons\\classes\\Form\\Controller\\AdminPayPalInstallment\\FormInstallment',
+  214 => 'PrestaShop\\Module\\Chatgptcontentgenerator\\Entity\\GptContentGenerator',
+  215 => 'PrestaShop\\Module\\Chatgptcontentgenerator\\Entity\\GptContentTemplate',
 );

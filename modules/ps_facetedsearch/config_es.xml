@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
     <name>ps_facetedsearch</name>
-    <displayName><![CDATA[Faceted search]]></displayName>
+    <displayName><![CDATA[B&uacute;squeda por facetas]]></displayName>
     <version><![CDATA[3.7.1]]></version>
-    <description><![CDATA[Filter your catalog to help visitors picture the category tree and browse your store easily.]]></description>
+    <description><![CDATA[Filtra tu cat&aacute;logo para ayudar a los visitantes a visualizar el &aacute;rbol de categor&iacute;as y a navegar m&aacute;s f&aacute;cilmente por tu tienda.]]></description>
     <author><![CDATA[PrestaShop]]></author>
     <tab><![CDATA[front_office_features]]></tab>
     <is_configurable>1</is_configurable>

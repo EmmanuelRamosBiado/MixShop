@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>chatgptcontentgenerator</name>
+    <displayName><![CDATA[ChatGPT Content Generator]]></displayName>
+    <version><![CDATA[1.0.10]]></version>
+    <description><![CDATA[ChatGPT Content Generator]]></description>
+    <author><![CDATA[SoftSprint]]></author>
+    <tab><![CDATA[administration]]></tab>
+	<confirmUninstall><![CDATA[Are you sure wand uninstall this module ?]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

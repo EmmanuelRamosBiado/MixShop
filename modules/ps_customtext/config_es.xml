@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
     <name>ps_customtext</name>
-    <displayName><![CDATA[Custom text block]]></displayName>
+    <displayName><![CDATA[Bloque de texto personalizado]]></displayName>
     <version><![CDATA[4.2.0]]></version>
-    <description><![CDATA[Give your visitors extra information, display a customized block of content on your homepage.]]></description>
+    <description><![CDATA[Ofrece a tus visitantes informaci&oacute;n adicional, muestra un bloque de contenido personalizado en tu p&aacute;gina de inicio.]]></description>
     <author><![CDATA[PrestaShop]]></author>
     <tab><![CDATA[]]></tab>
     <is_configurable>1</is_configurable>

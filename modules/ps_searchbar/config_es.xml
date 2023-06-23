@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
     <name>ps_searchbar</name>
-    <displayName><![CDATA[Search bar]]></displayName>
+    <displayName><![CDATA[Barra de b&uacute;squeda]]></displayName>
     <version><![CDATA[2.1.2]]></version>
-    <description><![CDATA[Help your visitors find what they are looking for, add a quick search field to your store.]]></description>
+    <description><![CDATA[Ayuda a tus visitantes a encontrar lo que buscan, a&ntilde;ade un campo de b&uacute;squeda r&aacute;pida a tu tienda.]]></description>
     <author><![CDATA[PrestaShop]]></author>
     <tab><![CDATA[]]></tab>
     <is_configurable>0</is_configurable>

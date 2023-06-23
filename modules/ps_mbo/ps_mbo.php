@@ -135,7 +135,7 @@ class ps_mbo extends Module
     public function __construct()
     {
         $this->name = 'ps_mbo';
-        $this->version = '2.2.0';
+        $this->version = '2.2.1';
         $this->author = 'PrestaShop';
         $this->tab = 'administration';
         $this->module_key = '6cad5414354fbef755c7df4ef1ab74eb';
@@ -392,7 +392,7 @@ class ps_mbo extends Module
     {
         // has to be loaded in header to prevent flash of content
         $this->context->controller->addJs($this->getPathUri() . 'views/js/recommended-modules.js?v=' . $this->version);
-        $this->context->controller->addCSS($this->getPathUri() . 'views/css/catalog.css');
+        $this->context->controller->addCSS($this->getPathUri() . 'views/css/catalog.css?v=' . $this->version, 'all', null, false);
 
         if (
             $this->shouldAttachRecommendedModulesButton()

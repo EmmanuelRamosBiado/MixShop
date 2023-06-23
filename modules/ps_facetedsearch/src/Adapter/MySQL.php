@@ -210,7 +210,7 @@ class MySQL extends AbstractAdapter
                 'tableAlias' => 'm',
                 'fieldName' => 'name',
                 'joinCondition' => '(p.id_manufacturer = m.id_manufacturer)',
-                'joinType' => self::INNER_JOIN,
+                'joinType' => self::LEFT_JOIN,
             ],
             'name' => [
                 'tableName' => 'product_lang',
@@ -301,9 +301,50 @@ class MySQL extends AbstractAdapter
                 'joinCondition' => '(psales.id_product = p.id_product)',
                 'joinType' => self::LEFT_JOIN,
             ],
+            'reduction' => [
+                'tableName' => 'specific_price',
+                'tableAlias' => 'sp',
+                'joinCondition' => '(
+                    sp.id_product = p.id_product AND 
+                    sp.id_shop IN (0, ' . $this->getContext()->shop->id . ') AND 
+                    sp.id_currency IN (0, ' . $this->getContext()->currency->id . ') AND 
+                    sp.id_country IN (0, ' . $this->getContext()->country->id . ') AND 
+                    sp.id_group IN (0, ' . $this->getContext()->customer->id_default_group . ') AND 
+                    sp.from_quantity = 1 AND
+                    sp.reduction > 0 AND
+                    sp.id_customer = 0 AND
+                    sp.id_cart = 0 AND 
+                    (sp.from = \'0000-00-00 00:00:00\' OR \'' . date('Y-m-d H:i:s') . '\' >= sp.from) AND 
+                    (sp.to = \'0000-00-00 00:00:00\' OR \'' . date('Y-m-d H:i:s') . '\' <= sp.to) 
+                )',
+                'joinType' => self::INNER_JOIN,
+            ],
         ];
 
         return $filterToTableMapping;
+    }
+
+    /**
+     * Get the joined and escaped value from an multi-dimensional array
+     *
+     * @param string $separator
+     * @param array $values
+     *
+     * @return string Escaped string value
+     */
+    protected function getJoinedEscapedValue($separator, array $values)
+    {
+        foreach ($values as $key => $value) {
+            if (is_array($value)) {
+                $values[$key] = $this->getJoinedEscapedValue($separator, $value);
+            } elseif (is_numeric($value)) {
+                $values[$key] = pSQL($value);
+            } else {
+                $values[$key] = "'" . pSQL($value) . "'";
+            }
+        }
+
+        return implode($separator, $values);
     }
 
     /**
@@ -477,9 +518,7 @@ class MySQL extends AbstractAdapter
                         $operator = !empty($operation[2]) ? $operation[2] : '=';
                         $conditions[] = $selectAlias . '.' . $operation[0] . $operator . current($values);
                     } else {
-                        $conditions[] = $selectAlias . '.' . $operation[0] . ' IN (' . implode(', ', array_map(function ($value) {
-                            return is_numeric($value) ? pSQL($value) : "'" . pSQL($value) . "'";
-                        }, $values)) . ')';
+                        $conditions[] = $selectAlias . '.' . $operation[0] . ' IN (' . $this->getJoinedEscapedValue(', ', $values) . ')';
                     }
                 }
 
@@ -510,9 +549,7 @@ class MySQL extends AbstractAdapter
                                 $selectAlias . '.' . $filterName . $operator . "'" . current($values) . "'";
                         } else {
                             $whereConditions[] =
-                                $selectAlias . '.' . $filterName . ' IN (' . implode(', ', array_map(function ($value) {
-                                    return is_numeric($value) ? pSQL($value) : "'" . pSQL($value) . "'";
-                                }, $values)) . ')';
+                                $selectAlias . '.' . $filterName . ' IN (' . $this->getJoinedEscapedValue(', ', $values) . ')';
                         }
                     } else {
                         $orConditions = [];

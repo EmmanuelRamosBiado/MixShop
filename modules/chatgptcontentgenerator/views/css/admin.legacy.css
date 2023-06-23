@@ -1,0 +1,683 @@
+/**
+* 2007-2023 PrestaShop
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Academic Free License (AFL 3.0)
+* that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/afl-3.0.php
+* If you did not receive a copy of the license and are unable to
+* obtain it through the world-wide-web, please send an email
+* to license@prestashop.com so we can send you a copy immediately.
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+* versions in the future. If you wish to customize PrestaShop for your
+* needs please refer to http://www.prestashop.com for more information.
+*
+*  @author    PrestaShop SA <contact@prestashop.com>
+*  @copyright 2007-2023 PrestaShop SA
+*  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+*  International Registered Trademark & Property of PrestaShop SA
+*
+* Don't forget to prefix your containers with your own identifier
+* to avoid any conflicts with others containers.
+*/
+
+.translate-action-wrapper {
+    clear: both;
+    padding-left: 5px;
+    padding-right: 5px;
+        padding-top: 0.625rem;
+}
+
+.gpt-description-wraper,
+.gpt-custom-request-wrapper {
+    padding-left: 5px;
+    padding-right: 5px;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.gpt-description-wraper  .ml-2 {
+    margin-left: 0.625rem !important;
+}
+
+.gpt-description-wraper  .ml-3,
+.gpt-custom-request-wrapper .ml-3 {
+        margin-left: 0.9375rem !important;
+}
+
+.gpt-description-wraper .mb-3,
+.gpt-custom-request-wrapper .mb-3,
+.gpt-modal .mb-3 {
+    margin-bottom: 0.9375rem !important;
+}
+
+.gpt-description-wraper .mt-2,
+.gpt-custom-request-wrapper .mt-2,
+.gpt-modal .mt-2 {
+        margin-top: 0.625rem !important;
+}
+
+.gpt-description-wraper  .w-100,
+.gpt-custom-request-wrapper .w-100{
+    width: 100% !important;
+}
+
+.gpt-custom-request-wrapper .d-flex {
+     display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important
+}
+
+.gpt-custom-request-wrapper [id^="btn-custom-request-"]{
+    line-height: 1.0;
+}
+
+.gpt-custom-request-wrapper [id^="input-custom-request-"] {
+    height: 100% !important;
+}
+
+.gpt-modal {
+        font-size: .875rem;
+}
+
+.gpt-modal .btn {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 8px;
+    text-align: center;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+        text-transform: none;
+    text-decoration: none;
+    line-height: 1.0;
+}
+
+.gpt-modal .btn > .material-icons {
+    vertical-align: middle;
+    line-height: 1.0;
+    display: none;
+}
+
+.gpt-modal .btn.btn-primary {
+    border-color: #2eacce;
+
+        background-color: #00aff0;
+    color: #fff;
+    
+}
+
+.gpt-modal .btn.btn-primary:hover {
+    -webkit-box-shadow: none;
+    background-color: #008abd;
+    box-shadow: none;
+}
+
+.gpt-modal .btn.btn-default,
+.gpt-modal .btn.btn-outline-secondary {
+    background-color: #fff;
+    border-color: #dedede;
+    color: #363a41;
+}
+
+.gpt-modal .btn.btn-outline-secondary:hover {
+    -webkit-box-shadow: none;
+    background-color: #00aff0;
+    border-color: #008abd;
+    box-shadow: none;
+    color: #fff;
+}
+
+
+
+.gpt-modal .close {
+    float: right;
+    font-size: 1.3125rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+
+.gpt-modal button.close{
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+}
+
+.gpt-modal .modal-header .close {
+        /*padding: 1.25rem;*/
+            padding: 0px 15px 0px 0px;
+    margin: -1.825rem -1.25rem -1.25rem auto;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.gpt-modal .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    /*margin-right: -0.9375rem;*/
+    /*margin-left: -0.9375rem;*/
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.gpt-modal .row .col-md-6 {
+    padding-left: 5px;
+    padding-right: 5px;
+        box-sizing: border-box;
+}
+
+.gpt-modal .row .col-md-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.gpt-modal .row  .col-md-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.gpt-modal .pl-1px {
+    padding-left: 1px !important;
+}
+
+.gpt-modal .choice-table, .gpt-modal .choice-table-headers-fixed table tbody {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.gpt-modal .table-bordered {
+    width: 100%;
+}
+
+.gpt-modal table th {
+    padding: 0.4rem;
+    text-align: left;
+}
+
+.gpt-modal table {
+    font-size: 0.8rem;
+}
+
+.gpt-modal .table-bordered td {
+    border: 1px solid #bbcdd2;
+        padding: 0.4rem;
+}
+
+.gpt-modal .table thead th {
+    border-top: none;
+    border-bottom: solid 0.125rem #25b9d7;
+        vertical-align: bottom;
+}
+
+.gpt-modal .form-check-radio .form-check-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.gpt-modal .form-check-radio input {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.gpt-modal .form-check-round {
+    position: relative;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border: 2px solid #b3c7cd;
+    -webkit-transition: 0.25s ease-out;
+    transition: 0.25s ease-out;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.gpt-modal .form-check-round::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    content: "";
+    background: #25b9d7;
+    opacity: 0;
+    -webkit-transition: 0.25s ease-out;
+    transition: 0.25s ease-out;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.gpt-modal .form-check-radio input:checked ~ .form-check-round {
+    border-color: #25b9d7;
+}
+
+.gpt-modal .form-check-radio input:checked ~ .form-check-round::after {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.gpt-modal .md-checkbox.md-checkbox-inline {
+    display: inline-block;
+}
+
+.gpt-modal .md-checkbox {
+    position: relative;
+    margin: 0;
+    margin: initial;
+    text-align: left;
+}
+
+.gpt-modal .md-checkbox label {
+    padding-left: 28px;
+    margin-bottom: 0;
+}
+
+.gpt-modal .md-checkbox [type="checkbox"] {
+    display: none;
+    outline: 0;
+}
+
+.gpt-modal .md-checkbox .md-checkbox-control {
+    cursor: pointer;
+}
+
+.gpt-modal  .md-checkbox .md-checkbox-control::before, .gpt-modal  .md-checkbox .md-checkbox-control::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    box-sizing: border-box;
+}
+
+.gpt-modal  .md-checkbox .md-checkbox-control::before {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background: #fff;
+    border: 2px solid #b3c7cd;
+    border-radius: 2px;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+}
+
+.gpt-modal .md-checkbox [type="checkbox"]:checked+.md-checkbox-control::before,
+.gpt-modal .md-checkbox .indeterminate+.md-checkbox-control::before {
+    background: #25b9d7;
+    border: none;
+}
+
+.gpt-modal .md-checkbox [type="checkbox"]:checked+.md-checkbox-control::after,
+.gpt-modal .md-checkbox .indeterminate+.md-checkbox-control::after {
+    top: 4.5px;
+    left: 3px;
+    width: 14px;
+    height: 7px;
+    border: 2px solid #fff;
+    border-top-style: none;
+    border-right-style: none;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.gpt-modal .tab-content {
+    padding: 10px;
+}
+
+.gpt-modal  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.gpt-modal .nav-link {
+    display: block;
+    padding: 0.9375rem 1.25rem;
+    text-decoration: none;
+}
+
+.gpt-modal .nav-tabs .nav-link {
+    margin-bottom: -1px;
+    border: 1px solid transparent;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.gpt-modal .nav-tabs .nav-link {
+    border: none;
+    border-radius: 0;
+}
+
+.gpt-modal .nav-tabs .nav-link.active, .gpt-modal  .nav-tabs .nav-item.show .nav-link {
+    color: #363a41;
+    background-color: #fff;
+    border-color: #25b9d7;
+}
+
+.gpt-modal .nav-tabs .nav-link.active, .gpt-modal  .nav-tabs .nav-item.show .nav-link {
+    border-top: solid 0.1875rem #25b9d7;
+}
+
+.gpt-modal  .font-weight-bold {
+    font-weight: 700 !important;
+}
+
+.gpt-modal .form-control {
+        display: block;
+    width: 100%;
+    /*height: 2.188rem;*/
+    padding: 0.375rem 0.4375rem;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #363a41;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bbcdd2;
+    border-radius: 4px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+}
+
+.gpt-modal .input-group {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    /*width: 100%;*/
+    width: auto;
+}
+
+.gpt-modal .input-group > .form-control{
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+    margin-bottom: 0;
+}
+
+.gpt-modal .input-group-prepend, .input-group-append {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+        margin-left: -1px;
+}
+
+.gpt-modal  .input-group-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0.375rem 0.4375rem;
+    margin-bottom: 0;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #363a41;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #fafbfc;
+    border: 1px solid #bbcdd2;
+    border-radius: 4px;
+}
+
+.gpt-modal .input-group>.input-group-append>.input-group-text {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.gpt-modal .input-group:not(.has-validation)>.form-control:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+.gpt-modal .text-right {
+    text-align: right;
+}
+
+.gpt-modal .ps-switch {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 21px;
+    box-sizing: border-box;
+}
+
+.gpt-modal .ps-switch input {
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.ps-switch input:checked {
+    z-index: 0;
+}
+
+.gpt-modal  .form-inline label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.gpt-modal .ps-switch label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    padding-left: 2.8rem;
+    opacity: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.gpt-modal .ps-switch .slide-button {
+    position: relative;
+    position: absolute;
+    top: 50%;
+    z-index: 0;
+    display: block;
+    width: 35px;
+    height: 21px;
+    background: #b3c7cd;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: 0.25s ease-out;
+    transition: 0.25s ease-out;
+    border-radius: 1000px;
+}
+
+.gpt-modal .ps-switch .slide-button::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 46%;
+    height: calc(100% - 4px);
+    content: "";
+    background: #fff;
+    -webkit-transform: translate(2px, -48%);
+    transform: translate(2px, -48%);
+    border-radius: 50%;
+    -webkit-transition: 0.25s ease-out;
+    transition: 0.25s ease-out;
+}
+
+.gpt-modal .ps-switch input:last-of-type:checked ~ label:last-of-type {
+    opacity: 1;
+}
+
+.gpt-modal .ps-switch input:first-of-type:checked ~ label:first-of-type {
+    opacity: 1;
+}
+
+.gpt-modal .ps-switch input:last-of-type:checked ~ .slide-button {
+    background: #70b580;
+}
+
+.gpt-modal .ps-switch input:last-of-type:checked ~ .slide-button::after {
+    -webkit-transform: translate(17px, -48%);
+    transform: translate(17px, -48%);
+}
+
+.gpt-modal .alert {
+    /*min-height: 55px;*/
+}
+
+.gpt-modal .alert {
+    position: relative;
+    padding: 1rem 15px 1rem 2.875rem;
+    color: #363a41;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.gpt-modal .alert::before {
+    display: inline-block;
+    font-family: "Material Icons", Arial, Verdana, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.gpt-modal .alert-danger {
+    background-color: #fbc6c3;
+    border: 1px solid #f44336;
+}
+
+.gpt-modal .alert-danger::before {
+    color: #f44336;
+    content: "";
+}
+
+.gpt-modal .alert-success {
+    background-color: #cbf2d4;
+    border: 1px solid #53d572;
+}
+
+.gpt-modal  .alert-success::before {
+    color: rgb(83, 213, 114);
+    content: "";
+}
+
+.gpt-modal .alert .alert-text {
+    margin: 0px;
+}
+
+.gpt-modal .progress-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #25b9d7;
+    -webkit-transition: width 0.6s ease;
+    transition: width 0.6s ease;
+}
+
+.gpt-modal .progress-bar-striped {
+    background-image: linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+    background-size: 1rem 1rem;
+}

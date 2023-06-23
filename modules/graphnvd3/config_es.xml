@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
     <name>graphnvd3</name>
-    <displayName><![CDATA[NVD3 Charts]]></displayName>
+    <displayName><![CDATA[Diagramas NVD3]]></displayName>
     <version><![CDATA[2.0.2]]></version>
-    <description><![CDATA[Enable the NVD3 charting code for your own uses, providing you with ever so useful graphs.]]></description>
+    <description><![CDATA[Habilita el c&oacute;digo NVD3 para tu uso propio, te proveer&aacute; gr&aacute;ficos m&aacute;s &uacute;tiles.]]></description>
     <author><![CDATA[PrestaShop]]></author>
     <tab><![CDATA[administration]]></tab>
     <is_configurable>0</is_configurable>

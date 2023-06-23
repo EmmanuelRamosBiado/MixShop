@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
     <name>gridhtml</name>
-    <displayName><![CDATA[Simple HTML table display]]></displayName>
+    <displayName><![CDATA[Mostrar HTML simple]]></displayName>
     <version><![CDATA[2.0.2]]></version>
-    <description><![CDATA[Just allow statistics to be displayed (and therefore analyzed) on your back office.]]></description>
+    <description><![CDATA[Simplemente permite que los datos estad&iacute;sticos se muestren (y por tanto se analicen) en tu back office.]]></description>
     <author><![CDATA[PrestaShop]]></author>
     <tab><![CDATA[administration]]></tab>
     <is_configurable>0</is_configurable>

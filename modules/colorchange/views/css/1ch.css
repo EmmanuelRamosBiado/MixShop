@@ -1,0 +1,122 @@
+
+.product-images>li.thumb-container>.thumb.selected, .product-images>li.thumb-container>.thumb:hover{border: 3px solid #ffffff!important;}
+.dropdown .expand-more, #header .header-nav .currency-selector{color: #00ff00!important}
+/*buton*/
+
+.btn-primary {
+    color: #ff0000!important;
+    background-color: #ffffff!important;
+}
+.btn-primary.disabled.focus, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary:disabled.focus, .btn-primary:disabled:focus, .btn-primary:disabled:hover {
+    background-color: #ffffff!important;
+    border-color: transparent;
+}
+.btn-primary.focus, .btn-primary:focus, .btn-primary:hover,.tag-primary[href]:focus, .tag-primary[href]:hover  { background-color: !important;}
+
+.btn-outline-primary.active, .btn-outline-primary.focus, .btn-outline-primary:active, .btn-outline-primary:focus, .btn-outline-primary:hover, .open>.btn-outline-primary.dropdown-toggle {
+    color: #ff0000!important;
+    background-color: #ffffff!important;
+    border-color: #2fb5d2;
+}
+.dropdown-item.active, .dropdown-item.active:focus, .dropdown-item.active:hover {
+    color: #ff0000!important;
+    text-decoration: none;
+    background-color: #ffffff!important;
+    outline: 0;
+}
+.nav-pills .nav-item.open .nav-link, .nav-pills .nav-item.open .nav-link:focus, .nav-pills .nav-item.open .nav-link:hover, .nav-pills .nav-link.active, .nav-pills .nav-link.active:focus, .nav-pills .nav-link.active:hover {
+    color: #ff0000!important;
+    cursor: default;
+    background-color: #ffffff!important;
+}
+.card-primary {
+    background-color: #ffffff!important;
+    border-color: #2fb5d2;
+}
+.page-item.active .page-link, .page-item.active .page-link:focus, .page-item.active .page-link:hover {
+    z-index: 2;
+    color: #ff0000!important;
+    cursor: default;
+    background-color: #ffffff!important;
+    border-color: #2fb5d2;
+}
+.tag-primary {
+    background-color: #ffffff!important;
+}
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #ff0000!important;
+    text-decoration: none;
+    background-color: #ffffff!important;
+    border-color: #2fb5d2;
+}
+.custom-radio input[type=radio]:checked+span {
+    background-color: #ffffff!important;
+
+}
+.block-social li:hover {
+    background-color: #ffffff!important;
+}
+.tabs .nav-tabs .nav-link.active, .tabs .nav-tabs .nav-link:hover {
+    border: none;
+    border-bottom: 3px solid #ffffff!important;
+}
+.tabs .nav-tabs .nav-link.active {
+    color: #ffffff!important;
+}
+a, #footer .h1,#footer .h2,#footer .h3, .block-contact .block-contact-title, .linklist .blockcms-title a {
+    color: #000000!important;
+    text-decoration: none;
+}
+#header .header-nav .cart-preview.active {
+    background: #ffffff!important;
+}
+/*prices*/
+.product-price, .cart-summary-line .value,#products .product-price-and-shipping, .featured-products .product-price-and-shipping, .product-accessories .product-price-and-shipping, .product-miniature .product-price-and-shipping{
+ color: !important;
+	}
+/*wrapper*/
+#wrapper,.product-customization .product-message,.search-widget form input[type=text], .block_newsletter form input[type=text] {
+    background-color: #000000!important;
+
+}
+#wrapper{
+    background-color: #000000!important;
+    
+
+    background-repeat:repeat!important;
+}
+.tag-default {
+    background: #000000!important;
+}
+.bootstrap-touchspin .btn-touchspin:hover {
+    background-color: #000000!important;
+}
+body#checkout .modal-content {
+    background-color: #000000!important;
+}
+.block-social li:hover {
+    background-color: #000000!important;
+}
+#footer {
+    background-color: #ff0000!important;
+}
+#header {
+    background: #ffffff!important;
+}
+/*blocks*/
+#search_filters, #search_filters_brands, #search_filters_suppliers, .block-categories, .card{
+	  background: #ffffff!important;
+	}
+#products .product-description, .featured-products .product-description, .product-accessories .product-description, .product-miniature .product-description, #products .thumbnail-container, .featured-products .thumbnail-container, .product-accessories .thumbnail-container, .product-miniature .thumbnail-container
+{
+	    background: #ffffff!important;
+}
+#header .header-nav .cart-preview.active i, #header .header-nav .cart-preview.active a{color:#000000!important}
+.block-social  li{background:!important;}
+.facebook.icon-gray,.twitter.icon-gray,.googleplus.icon-gray,.pinterest.icon-gray {
+    background-color:  !important;
+}
+#wrapper .container{background-color: #000000}
+
+	

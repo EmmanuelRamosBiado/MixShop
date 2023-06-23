@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>legalwarning</name>
+    <displayName><![CDATA[Legal warning]]></displayName>
+    <version><![CDATA[2.0.0]]></version>
+    <description><![CDATA[Show a popup with a message.]]></description>
+    <author><![CDATA[RSI]]></author>
+    <tab><![CDATA[administration]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

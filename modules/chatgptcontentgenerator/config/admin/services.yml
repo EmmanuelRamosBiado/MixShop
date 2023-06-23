@@ -1,0 +1,14 @@
+services:
+  _defaults:
+    public: true
+
+  # override product inteface service
+  prestashop.core.admin.data_provider.product_interface:
+    class: PrestaShopBundle\Service\DataProvider\Admin\ProductInterface
+
+  # override product data provider
+  prestashop.adapter.admin.data_provider.product:
+    class: PrestaShop\Module\Chatgptcontentgenerator\Adapter\Product\GptProductDataProvider
+    decorates: prestashop.core.admin.data_provider.product_interface
+    arguments:
+      - "@doctrine.orm.entity_manager"

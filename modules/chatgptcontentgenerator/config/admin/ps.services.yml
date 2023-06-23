@@ -1,0 +1,55 @@
+services:
+  _defaults:
+    public: true
+
+  ##############
+  # Module
+
+  chatgptcontentgenerator.module:
+    class: Chatgptcontentgenerator
+    factory: ['Module', 'getInstanceByName']
+    arguments:
+      - 'chatgptcontentgenerator'
+
+  chatgptcontentgenerator.context:
+    class: Context
+    factory: ['Context', 'getContext']
+
+  #####################
+  # PrestaShop Account
+  # ps_accounts.installer:
+  #   class: 'PrestaShop\PsAccountsInstaller\Installer\Installer'
+  #   arguments:
+  #     - '5.0'
+  ps_accounts.installer:
+    class: 'PrestaShop\Module\Chatgptcontentgenerator\Installer\Installer'
+    arguments:
+      - '5.0'
+
+  ps_accounts.facade:
+    class: 'PrestaShop\PsAccountsInstaller\Installer\Facade\PsAccounts'
+    arguments:
+      - '@ps_accounts.installer'
+
+  #####################
+  # PrestaShop Billing
+
+  ps_billings.context_wrapper:
+    class: 'PrestaShopCorp\Billing\Wrappers\BillingContextWrapper'
+    arguments:
+    - '@ps_accounts.facade'
+    - '@chatgptcontentgenerator.context'
+    - false
+
+  ps_billings.facade:
+    class: 'PrestaShopCorp\Billing\Presenter\BillingPresenter'
+    arguments:
+    - '@ps_billings.context_wrapper'
+    - '@chatgptcontentgenerator.module'
+
+  # Remove this if you do not need BillingService
+  ps_billings.service:
+    class: 'PrestaShopCorp\Billing\Services\BillingService'
+    arguments:
+    - '@ps_billings.context_wrapper'
+    - '@chatgptcontentgenerator.module'

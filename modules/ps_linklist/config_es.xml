@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
     <name>ps_linklist</name>
-    <displayName><![CDATA[Link List]]></displayName>
-    <version><![CDATA[5.0.4]]></version>
-    <description><![CDATA[Give more visibility to your content/static pages (CMS, external pages, or else), where you want and when you want, to make your visitors feel like shopping on your store.]]></description>
+    <displayName><![CDATA[Lista de enlaces]]></displayName>
+    <version><![CDATA[5.0.5]]></version>
+    <description><![CDATA[Da mayor visibilidad a tu contenido y p&aacute;ginas est&aacute;ticas para aumentar el inter&eacute;s de tus visitantes.]]></description>
     <author><![CDATA[PrestaShop]]></author>
     <tab><![CDATA[front_office_features]]></tab>
     <is_configurable>1</is_configurable>
